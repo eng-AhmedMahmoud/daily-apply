@@ -12,7 +12,7 @@
   }
   *{box-sizing:border-box}
   body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);padding:24px}
-  .wrap{max-width:780px;margin:0 auto}
+  .wrap{max-width:820px;margin:0 auto}
   h1{font-size:22px;margin:0 0 4px}
   .sub{color:var(--muted);font-size:13px;margin-bottom:20px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
@@ -32,11 +32,13 @@
   th{color:var(--muted);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
   td.co{font-weight:500}
   td.em{color:var(--muted);font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  td.nt{color:var(--muted);font-size:12px}
   ul.blockers{list-style:none;padding:0;margin:0}
   ul.blockers li{padding:8px 0;border-bottom:1px solid var(--border)}
   ul.blockers li:last-child{border:none}
   ul.blockers .t{font-weight:500;color:var(--red)}
   ul.blockers .d{color:var(--muted);font-size:13px;margin-top:2px}
+  ul.changes li{padding:4px 0;font-size:13px}
   footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
 </style>
 </head>
@@ -48,7 +50,7 @@
   <div class="grid">
     <div class="stat"><div class="n err">0/10</div><div class="l">LinkedIn EZ</div></div>
     <div class="stat"><div class="n err">0/10</div><div class="l">Remote boards</div></div>
-    <div class="stat"><div class="n ok">40/40</div><div class="l">HR outreach</div></div>
+    <div class="stat"><div class="n warn">29/40</div><div class="l">HR outreach</div></div>
   </div>
 
   <section>
@@ -56,84 +58,90 @@
     <div class="phase">
       <div>
         <div class="name">Phase 1 — LinkedIn Easy Apply</div>
-        <span class="note">Easy Apply button DOM-stripped from job detail view. Past-week pool stale-applied.</span>
+        <span class="note">Skipped — Easy Apply DOM still stripped from job detail view.</span>
       </div>
       <div class="res err">0/10</div>
     </div>
     <div class="phase">
       <div>
-        <div class="name">Phase 1b — Remote boards</div>
-        <span class="note">Himalayas removed from routine. Jobspresso/Workable added but blocked by file_upload MCP issue.</span>
+        <div class="name">Phase 1b — Remote boards (Jobspresso)</div>
+        <span class="note">Skipped — file_upload MCP blocker prevents CV submission on Workable/Greenhouse forms.</span>
       </div>
       <div class="res err">0/10</div>
     </div>
     <div class="phase">
       <div>
         <div class="name">Phase 2 — HR outreach</div>
-        <span class="note">40 drafts created, sent via Gmail UI. 3 deduped (already emailed lifetime).</span>
+        <span class="note">29 fresh recipients (21 deduped from yesterday's 40 sends). 3 search query rotations.</span>
       </div>
-      <div class="res ok">40/40</div>
+      <div class="res warn">29/40</div>
     </div>
   </section>
 
   <section>
-    <h2>Outreach Sent (40)</h2>
+    <h2>Outreach Sent Today (29)</h2>
     <table>
-      <thead><tr><th>#</th><th>Company / Recruiter</th><th>Email</th></tr></thead>
+      <thead><tr><th>#</th><th>Recipient</th><th>Email</th><th>Note</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td class="co">Skygate (Bhoomika)</td><td class="em">bhoomika@skygate.co.in</td></tr>
-        <tr><td>2</td><td class="co">Webideasole</td><td class="em">hr@webideasole.com</td></tr>
-        <tr><td>3</td><td class="co">NTT (Thifal Rachmawan)</td><td class="em">thifal.rachmawan@global.ntt</td></tr>
-        <tr><td>4</td><td class="co">Aceiserv (Prachi Srivastava)</td><td class="em">prachi.srivastava@aceiserv.com</td></tr>
-        <tr><td>5</td><td class="co">CHL Group (Shikha Singh)</td><td class="em">shikha.singh@chlgroup.org</td></tr>
-        <tr><td>6</td><td class="co">Unison Group (Sridhar)</td><td class="em">Sridhar@unisongroup.com</td></tr>
-        <tr><td>7</td><td class="co">Unison Tech MY (Sridhar)</td><td class="em">sridhar@unisontech.my</td></tr>
-        <tr><td>8</td><td class="co">VConnect Jobs (Neha)</td><td class="em">neha@vconnectjob.in</td></tr>
-        <tr><td>9</td><td class="co">Krowdhired (Puteri)</td><td class="em">puteri@krowdhired.com</td></tr>
-        <tr><td>10</td><td class="co">New Avenue Workforce</td><td class="em">hr@newavenueworkforce.com</td></tr>
-        <tr><td>11</td><td class="co">Bestcareers</td><td class="em">info@bestcareers.co.in</td></tr>
-        <tr><td>12</td><td class="co">Infiniti</td><td class="em">hr@infiniti.dev</td></tr>
-        <tr><td>13</td><td class="co">Hollborn Recruitment (Kusuma)</td><td class="em">kusuma@hollbornrecruitment.co.uk</td></tr>
-        <tr><td>14</td><td class="co">Guardline (Rafael Nova)</td><td class="em">rafael.nova@guardline.io</td></tr>
-        <tr><td>15</td><td class="co">Betacore (Mawya Shah)</td><td class="em">mawya.shah@betacore.in</td></tr>
-        <tr><td>16</td><td class="co">Halian (Pratibha Gupta)</td><td class="em">pratibha.gupta@halian.com</td></tr>
-        <tr><td>17</td><td class="co">Beyond Staff UK (Vidya)</td><td class="em">vidya@beyondstaff.co.uk</td></tr>
-        <tr><td>18</td><td class="co">Sun Technologies (Nandini)</td><td class="em">nandinis@suntechnologies.com</td></tr>
-        <tr><td>19</td><td class="co">Recruitment Specialist Priyanka</td><td class="em">recruitmentspecialistpriyanka@gmail.com</td></tr>
-        <tr><td>20</td><td class="co">HCL Tech (Berenice Castro)</td><td class="em">berenice.castr@hcltech.com</td></tr>
-        <tr><td>21</td><td class="co">Apuesta Total (Susan Sanchez)</td><td class="em">susan.sanchez@apuestatotal.com</td></tr>
-        <tr><td>22</td><td class="co">RH-T (Martin Celle)</td><td class="em">martin.celle@rh-t.com</td></tr>
-        <tr><td>23</td><td class="co">Neha Raghuvanshi (HR Coord.)</td><td class="em">neharaghuvanshi.hr.coordinator@gmail.com</td></tr>
-        <tr><td>24</td><td class="co">Unison Group (Nithya)</td><td class="em">NITHYA@unisongroup.com</td></tr>
-        <tr><td>25</td><td class="co">NIX Europe (Abdallah Elsherbiny)</td><td class="em">abdallah.elsherbiny@nixs.com</td></tr>
-        <tr><td>26</td><td class="co">TEKsystems (Andhar)</td><td class="em">andhar@teksystems.com</td></tr>
-        <tr><td>27</td><td class="co">Baxity (AS)</td><td class="em">as@baxity.com</td></tr>
-        <tr><td>28</td><td class="co">Empower Solutions</td><td class="em">careers@empower-solutions.com</td></tr>
-        <tr><td>29</td><td class="co">Ten Heads (Aarti Saini)</td><td class="em">aarti.saini@tenheads.co.in</td></tr>
-        <tr><td>30</td><td class="co">TechMantra Global (Pallavi)</td><td class="em">pallavi.g@techmantraglobal.com</td></tr>
-        <tr><td>31</td><td class="co">Aman Holding</td><td class="em">careers@aman.eg</td></tr>
-        <tr><td>32</td><td class="co">GoodJob Production</td><td class="em">info@goodjob-production.com</td></tr>
-        <tr><td>33</td><td class="co">SyntekAI</td><td class="em">syntekai.info@gmail.com</td></tr>
-        <tr><td>34</td><td class="co">Sustainmea Studio</td><td class="em">hr@sustainmea.studio</td></tr>
-        <tr><td>35</td><td class="co">Paradigm Digitals</td><td class="em">hr@paradigmdigitals.com</td></tr>
-        <tr><td>36</td><td class="co">HR Career Org</td><td class="em">hr.career.org@gmail.com</td></tr>
-        <tr><td>37</td><td class="co">Pradeep Nallamekala</td><td class="em">pradeepnallamekala@gmail.com</td></tr>
-        <tr><td>38</td><td class="co">Orange Antelopes</td><td class="em">jobs@orangeantelopes.com</td></tr>
-        <tr><td>39</td><td class="co">Techify BE</td><td class="em">contact@techify.be</td></tr>
-        <tr><td>40</td><td class="co">Radha Soni (HR India)</td><td class="em">radhasoni.hr.india@gmail.com</td></tr>
+        <tr><td>1</td><td class="co">Hussain Firdos</td><td class="em">hussainfirdos2001@gmail.com</td><td class="nt">personal</td></tr>
+        <tr><td>2</td><td class="co">Swaru Yadav</td><td class="em">swaruyadav26@gmail.com</td><td class="nt">personal</td></tr>
+        <tr><td>3</td><td class="co">Joydeep Chakroborty</td><td class="em">joydeepc963@gmail.com</td><td class="nt">intern hiring</td></tr>
+        <tr><td>4</td><td class="co">Umesh Singh</td><td class="em">umeshsinghkiller@gmail.com</td><td class="nt">internship</td></tr>
+        <tr><td>5</td><td class="co">Titilayo Adejumoke (TEN)</td><td class="em">titilayoadejumoke@gmail.com</td><td class="nt">internships</td></tr>
+        <tr><td>6</td><td class="co">Sarata Samuel</td><td class="em">ssaratusamuel@gmail.com</td><td class="nt">personal</td></tr>
+        <tr><td>7</td><td class="co">Harmeet Singh</td><td class="em">harmeetsingh6p@gmail.com</td><td class="nt">frontend</td></tr>
+        <tr><td>8</td><td class="co">Jobs Mediator (Veronica)</td><td class="em">veronicatule@jobsmediator.com</td><td class="nt">recruiter</td></tr>
+        <tr><td>9</td><td class="co">1950 Labs (Yesica Moreno)</td><td class="em">yesica.moreno@1950labs.com</td><td class="nt">LATAM remote</td></tr>
+        <tr><td>10</td><td class="co">MindNMuscl (Ayushmaan)</td><td class="em">ayushmaan@mindnmuscl.com</td><td class="nt">Tech Lead remote</td></tr>
+        <tr><td>11</td><td class="co">Aerxio</td><td class="em">info@aerxio.com</td><td class="nt">Senior Full-Stack</td></tr>
+        <tr><td>12</td><td class="co">Rohit (TEN/IN)</td><td class="em">rohithma91@gmail.com</td><td class="nt">openings</td></tr>
+        <tr><td>13</td><td class="co">Kangaroo Alphabet</td><td class="em">hr@kangarooalphabet.com</td><td class="nt">HR</td></tr>
+        <tr><td>14</td><td class="co">Dibya (TEN/IN)</td><td class="em">dibya.inrn@gmail.com</td><td class="nt">openings</td></tr>
+        <tr><td>15</td><td class="co">Rasoi Setu (Aditya)</td><td class="em">aditya@rasoisetu.com</td><td class="nt">React Native</td></tr>
+        <tr><td>16</td><td class="co">Verinite (Rutika Nimje)</td><td class="em">rutika.nimje@verinite.com</td><td class="nt">React+Python AU</td></tr>
+        <tr><td>17</td><td class="co">Hire-Souq</td><td class="em">hr@hire-souq.com</td><td class="nt">HR</td></tr>
+        <tr><td>18</td><td class="co">PetalKube</td><td class="em">careers@petalkube.com</td><td class="nt">MERN Calicut</td></tr>
+        <tr><td>19</td><td class="co">Roots iSolutions</td><td class="em">hr@rootsisolutions.com</td><td class="nt">HR</td></tr>
+        <tr><td>20</td><td class="co">Bitrupt</td><td class="em">careers@bitrupt.co</td><td class="nt">Karachi</td></tr>
+        <tr><td>21</td><td class="co">Safalta Services (Recruiter)</td><td class="em">recruiter@safaltaservices.com</td><td class="nt">Nepal</td></tr>
+        <tr><td>22</td><td class="co">NxtGen Analytics</td><td class="em">hr@nxtgencore.com</td><td class="nt">Full-Stack</td></tr>
+        <tr><td>23</td><td class="co">BigITJobs (Mayuri)</td><td class="em">mayuri@bigitjobs.com</td><td class="nt">recruiter</td></tr>
+        <tr><td>24</td><td class="co">Safalta Services (Neha)</td><td class="em">neha@safaltaservices.com</td><td class="nt">Senior Backend Laravel</td></tr>
+        <tr><td>25</td><td class="co">ForceCraver (J Bhatia)</td><td class="em">jbhatia@forcecraver.com</td><td class="nt">recruiter</td></tr>
+        <tr><td>26</td><td class="co">Anexra Solutions</td><td class="em">anexra.edu@gmail.com</td><td class="nt">Healthcare Freelance</td></tr>
+        <tr><td>27</td><td class="co">Vitsus (A Devdhar)</td><td class="em">a.devdhar@vitsus.com</td><td class="nt">recruiter</td></tr>
+        <tr><td>28</td><td class="co">AnjaneyaX Consulting</td><td class="em">info@anjaneyaxconsultingservices.com</td><td class="nt">.NET Full-Stack</td></tr>
+        <tr><td>29</td><td class="co">Global Talent Express</td><td class="em">globaltalentexpress@gmail.com</td><td class="nt">recruiter</td></tr>
       </tbody>
     </table>
   </section>
 
   <section>
-    <h2>Bounces / Dedupes</h2>
+    <h2>Dedupes / Skipped Today (21)</h2>
     <table>
-      <thead><tr><th>Type</th><th>Recipient</th><th>Note</th></tr></thead>
+      <thead><tr><th>Recipient</th><th>Reason</th></tr></thead>
       <tbody>
-        <tr><td class="warn">Bounce</td><td class="em">bhoomika@skygate.co.in</td><td>mailer-daemon@googlemail.com — address may be wrong</td></tr>
-        <tr><td>Dedupe</td><td class="em">Bhavani@parvu.ai</td><td>already emailed 2026-06-26</td></tr>
-        <tr><td>Dedupe</td><td class="em">srishti.khandel@cynergyservices.org</td><td>already emailed 2026-06-26</td></tr>
-        <tr><td>Dedupe</td><td class="em">kariman@swordegypt.net</td><td>already emailed 2026-06-26</td></tr>
+        <tr><td class="em">radhasoni.hr.india@gmail.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">contact@techify.be</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">jobs@orangeantelopes.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">pradeepnallamekala@gmail.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">hr.career.org@gmail.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">hr@paradigmdigitals.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">hr@sustainmea.studio</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">syntekai.info@gmail.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">info@goodjob-production.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">careers@aman.eg</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">pallavi.g@techmantraglobal.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">aarti.saini@tenheads.co.in</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">bhoomika@skygate.co.in</td><td class="nt">sent 2026-06-27 (bounced)</td></tr>
+        <tr><td class="em">careers@empower-solutions.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">as@baxity.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">andhar@teksystems.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">abdallah.elsherbiny@nixs.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">NITHYA@unisongroup.com</td><td class="nt">sent 2026-06-27</td></tr>
+        <tr><td class="em">neharaghuvanshi.hr.coordinator@gmail.com</td><td class="nt">sent 2026-06-27 (replied!)</td></tr>
+        <tr><td class="em">Bhavani@parvu.ai</td><td class="nt">sent 2026-06-26</td></tr>
+        <tr><td class="em">srishti.khandel@cynergyservices.org</td><td class="nt">sent 2026-06-26</td></tr>
       </tbody>
     </table>
   </section>
@@ -142,22 +150,34 @@
     <h2>Blockers</h2>
     <ul class="blockers">
       <li>
-        <div class="t">file_upload MCP API change</div>
-        <div class="d">Tool rejects <code>paths</code>, demands inline base64 <code>files</code> (~200KB / call). Blocks all CV uploads on Workable, Greenhouse, Lever, Ashby, Himalayas. Fallbacks (CSP-bypass fetch, hammerspoon native dialog, Workable Drive import) all failed.</div>
+        <div class="t">file_upload MCP API change (unresolved)</div>
+        <div class="d">Tool rejects <code>paths</code>, demands inline base64 <code>files</code> (~200KB / call). Blocks all CV uploads on Workable, Greenhouse, Lever, Ashby. Fallbacks (CSP-bypass fetch, hammerspoon native dialog, Workable Drive import) all failed.</div>
       </li>
       <li>
-        <div class="t">LinkedIn job detail strips Easy Apply</div>
-        <div class="d">Job detail view renders 0 apply buttons (10 total buttons, none with <code>jobs-apply-button</code> class). May be account-state or A/B related. Workaround: skip Phase 1 until selector returns.</div>
+        <div class="t">LinkedIn job detail strips Easy Apply (unresolved)</div>
+        <div class="d">Job detail view renders 0 apply buttons. Selector <code>jobs-apply-button</code> returns empty. Workaround: skip Phase 1 until selector returns.</div>
+      </li>
+      <li>
+        <div class="t">29/40 outreach target</div>
+        <div class="d">Yesterday's 40 sends exhausted top fresh emails in same search queries. Today's 3-query rotation found 48 raw, 21 already-sent. Below target. Tomorrow: rotate to 5 new query patterns.</div>
       </li>
     </ul>
   </section>
 
   <section>
-    <h2>Routine Changes Today</h2>
-    <ul>
-      <li>Removed Himalayas from routine (CF gate + custom ATSes + upload blocker).</li>
-      <li>Added Phase 1b table: Jobspresso, Working Nomads, RemoteOK, WWR, Remotive — Jobspresso wins (direct Workable URLs).</li>
-      <li>WhatsApp report switched from raw text to hosted HTML link.</li>
+    <h2>Notable</h2>
+    <ul class="changes">
+      <li>Reply received from <strong>Neha Raghuvanshi</strong> (PowerStorm Technology, sent 2026-06-27) — check inbox.</li>
+      <li>1 bounce yesterday (<code>bhoomika@skygate.co.in</code>) — address may be wrong.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Routine Changes (this run)</h2>
+    <ul class="changes">
+      <li>Himalayas removed from Phase 1b.</li>
+      <li>Phase 3 switched from raw WA text to hosted HTML link (GitHub Pages).</li>
+      <li>Report URL now stable: <code>https://eng-ahmedmahmoud.github.io/daily-apply/</code> (auto-deploys on push).</li>
     </ul>
   </section>
 
