@@ -27,10 +27,17 @@
   .phase .name{font-weight:500}
   .phase .res{font-variant-numeric:tabular-nums}
   .note{color:var(--muted);font-size:12px;display:block;margin-top:2px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{color:var(--muted);text-align:left;font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.5px;padding:6px 8px;border-bottom:1px solid var(--border)}
+  td{padding:6px 8px;border-bottom:1px solid var(--border)}
+  tr:last-child td{border:none}
+  .tag{font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid var(--border);color:var(--muted)}
+  .tag.react{color:var(--blue);border-color:var(--blue)}
+  .tag.next{color:var(--green);border-color:var(--green)}
   ul.blockers{list-style:none;padding:0;margin:0}
   ul.blockers li{padding:8px 0;border-bottom:1px solid var(--border)}
   ul.blockers li:last-child{border:none}
-  ul.blockers .t{font-weight:500;color:var(--red)}
+  ul.blockers .t{font-weight:500;color:var(--amber)}
   ul.blockers .d{color:var(--muted);font-size:13px;margin-top:2px}
   ul.changes li{padding:4px 0;font-size:13px}
   footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
@@ -42,31 +49,107 @@
   <div class="sub">2026-07-06 · Ahmed Mahmoud · ahmed.bis.iti@gmail.com</div>
 
   <div class="grid">
-    <div class="stat"><div class="n err">0<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">LinkedIn Easy Apply</div></div>
-    <div class="stat"><div class="n err">0<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">Remote Boards</div></div>
-    <div class="stat"><div class="n err">0<span style="color:var(--muted);font-size:14px">/40</span></div><div class="l">HR Outreach</div></div>
+    <div class="stat"><div class="n ok">10<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">LinkedIn Easy Apply</div></div>
+    <div class="stat"><div class="n warn">1<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">Remote Boards</div></div>
+    <div class="stat"><div class="n warn">37<span style="color:var(--muted);font-size:14px">/40</span></div><div class="l">HR Outreach</div></div>
   </div>
 
   <section>
     <h2>Phase Detail</h2>
-    <div class="phase"><div><div class="name">Phase 1 — LinkedIn Easy Apply</div><span class="note">Blocked at step 1 — Chrome browser MCP (claude-in-chrome) not connected this session</span></div><div class="res err">0/10</div></div>
-    <div class="phase"><div><div class="name">Phase 1b — Remote Boards (Jobspresso)</div><span class="note">Not attempted — same blocker, requires browser</span></div><div class="res err">0/10</div></div>
-    <div class="phase"><div><div class="name">Phase 2 — HR Outreach Emails</div><span class="note">Not attempted — LinkedIn scrape and Gmail UI send both require browser</span></div><div class="res err">0/40</div></div>
-    <div class="phase"><div><div class="name">Phase 3 — HTML Report + WhatsApp</div><span class="note">Generated; pushed to GitHub Pages; failure alert fired</span></div><div class="res ok">done</div></div>
+    <div class="phase"><div><div class="name">Phase 1 — LinkedIn Easy Apply</div><span class="note">Egypt page 1+2 → UAE. MENA location string misresolves; used UAE country search instead.</span></div><div class="res ok">10/10</div></div>
+    <div class="phase"><div><div class="name">Phase 1b — Remote Boards (Jobspresso)</div><span class="note">Paperpile (Workable) submitted &amp; confirmed. Feed only 30 tech jobs; rest US/Canada-locked; pagination broken.</span></div><div class="res warn">1/10</div></div>
+    <div class="phase"><div><div class="name">Phase 2 — HR Outreach Emails</div><span class="note">45 harvested → 4 already-contacted, 4 region-skips → 37 sent via Gmail UI. 1 bounce → 36 delivered.</span></div><div class="res warn">37/40</div></div>
+    <div class="phase"><div><div class="name">Phase 3 — HTML Report + WhatsApp</div><span class="note">Published to GitHub Pages; WA summary fired.</span></div><div class="res ok">done</div></div>
+  </section>
+
+  <section>
+    <h2>Easy Apply — 10 submitted</h2>
+    <table>
+      <tr><th>#</th><th>Company</th><th>Role</th><th>Mode</th><th>Stack</th></tr>
+      <tr><td>1</td><td>Crossing Hurdles</td><td>Software Engineer (Node.js/React)</td><td>Remote EMEA</td><td><span class="tag react">React</span></td></tr>
+      <tr><td>2</td><td>Virtual Worker Now</td><td>Product Engineer — Web &amp; Mobile</td><td>Egypt Remote</td><td><span class="tag react">React</span></td></tr>
+      <tr><td>3</td><td>NativeChips.ai</td><td>Senior Full Stack Engineer — Platform</td><td>Cairo On-site</td><td><span class="tag next">React/Next</span></td></tr>
+      <tr><td>4</td><td>SuperPay by e&amp;</td><td>Full-Stack Engineer</td><td>Cairo On-site</td><td><span class="tag">Frontend</span></td></tr>
+      <tr><td>5</td><td>Sana Commerce</td><td>Senior Full Stack Software Engineer</td><td>Alexandria Hybrid</td><td><span class="tag">Frontend</span></td></tr>
+      <tr><td>6</td><td>Crossing Hurdles</td><td>Software Engineer (Contract)</td><td>Remote EMEA</td><td><span class="tag react">React</span></td></tr>
+      <tr><td>7</td><td>Jobgether</td><td>Senior Next.js Developer</td><td>UAE Remote</td><td><span class="tag next">Next</span></td></tr>
+      <tr><td>8</td><td>Centroid Solutions</td><td>Full Stack Engineer (React.JS)</td><td>UAE Remote/Hybrid</td><td><span class="tag react">React</span></td></tr>
+      <tr><td>9</td><td>Discovered MENA</td><td>Frontend Developer (UI/UX)</td><td>Dubai Hybrid</td><td><span class="tag react">React</span></td></tr>
+      <tr><td>10</td><td>Arcus Search</td><td>Front End Engineer — Contract</td><td>Abu Dhabi Remote</td><td><span class="tag">Frontend</span></td></tr>
+      <tr><td>+</td><td>Paperpile <span class="tag">Workable</span></td><td>Full-Stack Engineer (TypeScript, React)</td><td>Worldwide Remote</td><td><span class="tag react">React/TS</span></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Outreach Sent — 37 emails</h2>
+    <table>
+      <tr><th>#</th><th>Company</th><th>Email</th></tr>
+      <tr><td>1</td><td>Turn2Grow</td><td>careers@turn2grow.com</td></tr>
+      <tr><td>2</td><td>CUBE Egypt</td><td>aelbosily@cubeegypt.com</td></tr>
+      <tr><td>3</td><td>The Art Click</td><td>hr@theartclick.com</td></tr>
+      <tr><td>4</td><td>GSS Global</td><td>amira.fathi@gssglobal.net</td></tr>
+      <tr><td>5</td><td>Zikola Agency</td><td>hr.nouran@zikolaa.com</td></tr>
+      <tr><td>6</td><td>Orange Egypt</td><td>aelsayegh.ext@orange.com</td></tr>
+      <tr><td>7</td><td>Tracking (KSA)</td><td>m.khaled@tracking.sa</td></tr>
+      <tr><td>8</td><td>Olimi AI</td><td>shaden@olimi.ai</td></tr>
+      <tr><td>9</td><td>Recruitment Consultancy</td><td>recruitment.consultancy22@gmail.com</td></tr>
+      <tr><td>10</td><td>AO Developers</td><td>ao.developers0@gmail.com</td></tr>
+      <tr><td>11</td><td>TOT Platform</td><td>hr@totplatform.com</td></tr>
+      <tr><td>12</td><td>Beetleware</td><td>careers@beetleware.com</td></tr>
+      <tr><td>13</td><td>PwC ETIC Cairo</td><td>mer_cdlc_de_hiring@pwc.com</td></tr>
+      <tr><td>14</td><td>Eon (KSA)</td><td>mohamed.elkholi@eon.sa</td></tr>
+      <tr><td>15</td><td>Recruiter (indep.)</td><td>rabdelkreem@gmail.com</td></tr>
+      <tr><td>16</td><td>Vaya</td><td>info@vaya.dev</td></tr>
+      <tr><td>17</td><td>CarryCodes</td><td>hany.k@carrycodes.com</td></tr>
+      <tr><td>18</td><td>FlairsTech</td><td>sohaila.salah@flairstech.com</td></tr>
+      <tr><td>19</td><td>AppZime</td><td>lipika.gogia@appzime.in</td></tr>
+      <tr><td>20</td><td>CareComm</td><td>manar@carecomm.com</td></tr>
+      <tr><td>21</td><td>EverExpanse</td><td>chithralekha@everexpanse.com</td></tr>
+      <tr><td>22</td><td>Objects</td><td>hiring@objects.ws</td></tr>
+      <tr><td>23</td><td>C-Zentrix</td><td>hr@c-zentrix.com</td></tr>
+      <tr><td>24</td><td>WalkingTree Tech</td><td>akanksha.sisodia@walkingtree.tech</td></tr>
+      <tr><td>25</td><td>Skeps</td><td>recruitment@skeps.com</td></tr>
+      <tr><td>26</td><td>Recruiter (indep.)</td><td>nermin.hr.work@gmail.com</td></tr>
+      <tr><td>27</td><td>Skycap</td><td>hr@skycap.co.in</td></tr>
+      <tr><td>28</td><td>Envnt</td><td>careers@envnt.co</td></tr>
+      <tr><td>29</td><td>Fawry</td><td>salma.ashraf@fawry.com</td></tr>
+      <tr><td>30</td><td>Fawry</td><td>monica.badr@fawry.com</td></tr>
+      <tr><td>31</td><td>Revival</td><td>noura.gamal@revival-me.com</td></tr>
+      <tr><td>32</td><td>Recruiter (indep.)</td><td>hromniamedhat@gmail.com</td></tr>
+      <tr><td>33</td><td>Recruiter (indep.)</td><td>ibrahim.arafa.elsawaf@gmail.com</td></tr>
+      <tr><td>34</td><td>BI-Technologies</td><td>careers@bi-technologies.net</td></tr>
+      <tr><td>35</td><td>Recruiter (indep.)</td><td>ahmed_mh97@yahoo.com</td></tr>
+      <tr><td>36</td><td>Talent Supplier</td><td>fatma@talentsupplier.co <span class="tag" style="color:var(--red);border-color:var(--red)">bounced</span></td></tr>
+      <tr><td>37</td><td>SKY Group</td><td>hanan.magdy@sky-grp.com</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Bounces &amp; Dedupes</h2>
+    <ul class="blockers">
+      <li><div class="t" style="color:var(--red)">Bounced (1)</div><div class="d">fatma@talentsupplier.co — 550 address not found. Net delivered: 36.</div></li>
+      <li><div class="t">Skipped, already contacted (4)</div><div class="d">kariman@swordegypt.net (Jun 26) · hr@infiniti.dev (Jun 27) · tammamtok.hr@gmail.com (Jun 30) · careers@aman.eg (Jun 27 — bounced 3× historically)</div></li>
+      <li><div class="t">Skipped, region/fit (4)</div><div class="d">talent@rth.gov.az (intern, Azerbaijan on-site) · priyanka.sharma@xebia.com (Bengaluru on-site) · lala@nextalent.id (Indonesia) · recruit@retailzoom.net (weak match)</div></li>
+    </ul>
   </section>
 
   <section>
     <h2>Blockers / Notes</h2>
     <ul class="blockers">
-      <li><div class="t">Chrome browser MCP unavailable — run stopped before any application</div><div class="d">The mcp__claude-in-chrome__* toolset never connected: three ToolSearch attempts returned no browser tools, and the server was absent from the MCP connecting list (Gmail, Drive, Notion, Canva all connected fine). Every phase depends on it — LinkedIn Easy Apply, Jobspresso/Workable form fills, feed scraping, and Gmail UI sending. Nothing was applied or sent today; no partial progress to report.</div></li>
-      <li><div class="t">Fix before next run</div><div class="d">Make sure Chrome is running with the Claude extension active (or restart Chrome), then relaunch the session so the claude-in-chrome MCP server registers. Verify with a tabs_context call before starting Phase 1.</div></li>
+      <li><div class="t">Gmail Drive-permission dialog on send</div><div class="d">Gmail flagged the CV Drive link ("This person won't have access") for corporate recipients (e.g. pwc.com) and blocked send until "Send anyway". Fix: set the CV file to "Anyone with the link — Viewer" in Drive to remove the interstitial.</div></li>
+      <li><div class="t">Chrome extension bridge dropped 3× mid-run</div><div class="d">Reconnected each time via select_browser (dedicated deviceId). Cost ~5 min total; no data loss.</div></li>
+      <li><div class="t">LinkedIn "MENA" location misresolves</div><div class="d">"Middle East And North Africa" now resolves to "Akoko North East" (13 junk results). Worked around with country-level searches (UAE). Update routine URL.</div></li>
+      <li><div class="t">Jobspresso thin</div><div class="d">Tech feed = 30 jobs, only 1 worldwide dev match (Paperpile). _paged=2 returns the same list — pagination broken upstream.</div></li>
     </ul>
   </section>
 
   <section>
     <h2>Routine Changes Today</h2>
     <ul class="changes">
-      <li>None — run aborted before any routine step executed.</li>
+      <li>Feed post extractor: legacy div.feed-shared-update-v2 selector returns 0 — switched to TreeWalker email-proximity scan with localStorage accumulator (per 2026-06 DOM redesign note).</li>
+      <li>MENA search: replaced broken region string with per-country searches (Egypt → UAE).</li>
+      <li>Send loop: added blind "Send anyway" click after ⌘⏎ to clear Drive-permission interstitials.</li>
+      <li>CV server: /tmp/cv.pdf was wiped (404 → Workable rejected 469-byte file); recopied from Downloads and re-injected successfully.</li>
     </ul>
   </section>
 
