@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Apply Report — 2026-07-15</title>
+<title>Daily Apply Report — 2026-07-18</title>
 <style>
   :root{
     --bg:#0b0d10; --card:#14181d; --text:#e7ecf2; --muted:#7d8997;
@@ -28,12 +28,11 @@
   .phase .res{font-variant-numeric:tabular-nums}
   .note{color:var(--muted);font-size:12px;display:block;margin-top:2px}
   table{width:100%;border-collapse:collapse;font-size:13px}
-  th{color:var(--muted);text-align:left;font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.5px;padding:6px 8px;border-bottom:1px solid var(--border)}
-  td{padding:6px 8px;border-bottom:1px solid var(--border)}
-  tr:last-child td{border:none}
-  .tag{font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid var(--border);color:var(--muted)}
-  .tag.react{color:var(--blue);border-color:var(--blue)}
-  .tag.next{color:var(--green);border-color:var(--green)}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+  tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;background:#1b2430;color:var(--muted);border:1px solid var(--border)}
+  .tag.react{background:#12241f;color:var(--green);border-color:#1c3a2f}
   ul.blockers{list-style:none;padding:0;margin:0}
   ul.blockers li{padding:8px 0;border-bottom:1px solid var(--border)}
   ul.blockers li:last-child{border:none}
@@ -46,88 +45,97 @@
 <body>
 <div class="wrap">
   <h1>Daily Apply Report</h1>
-  <div class="sub">2026-07-15 · Ahmed Mahmoud · ahmed.bis.iti@gmail.com</div>
+  <div class="sub">2026-07-18 · Ahmed Mahmoud · ahmed.bis.iti@gmail.com</div>
 
   <div class="grid">
-    <div class="stat"><div class="n warn">4<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">LinkedIn Easy Apply</div></div>
+    <div class="stat"><div class="n warn">2<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">LinkedIn Easy Apply</div></div>
     <div class="stat"><div class="n err">0<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">Remote Boards</div></div>
-    <div class="stat"><div class="n warn">7<span style="color:var(--muted);font-size:14px">/40</span></div><div class="l">HR Outreach</div></div>
+    <div class="stat"><div class="n warn">17<span style="color:var(--muted);font-size:14px">/40</span></div><div class="l">HR Outreach</div></div>
   </div>
 
   <section>
     <h2>Phase Detail</h2>
-    <div class="phase"><div><div class="name">Phase 1 — LinkedIn Easy Apply</div><span class="note">Egypt React pool largely exhausted from prior runs. Split-pane detail hung on promoted/agency posts → switched to /jobs/view/&lt;id&gt;/. 4 genuine frontend/full-stack fits submitted; rest skipped as mismatches or broken forms.</span></div><div class="res warn">4/10</div></div>
-    <div class="phase"><div><div class="name">Phase 1b — Remote Boards (Jobspresso)</div><span class="note">BLOCKED. Paperpile (Workable, worldwide React/TS) reached but CV upload failed — Chrome now blocks the cv.localhost fetch (Private Network Access) and file_upload MCP rejects host paths. 0 uploads possible.</span></div><div class="res err">0/10</div></div>
-    <div class="phase"><div><div class="name">Phase 2 — HR Outreach Emails</div><span class="note">15 harvested across 7 content searches → 4 region-skips, 4 already-contacted → 7 sent via Gmail UI (account u/1). No bounces observed.</span></div><div class="res warn">7/40</div></div>
+    <div class="phase"><div><div class="name">Phase 1 — LinkedIn Easy Apply</div><span class="note">f_AL results flooded by promoted staffing posts that actually use external "I'm interested" apply. Of ~12 postings checked, only 2 had a genuine Easy Apply and a matching stack; both submitted.</span></div><div class="res warn">2/10</div></div>
+    <div class="phase"><div><div class="name">Phase 1b — Remote Boards (Jobspresso)</div><span class="note">BLOCKED. Paperpile (Workable, worldwide React/TS) — all text + essays filled, but resume upload impossible: portless :443 proxy is down and MCP file_upload no longer accepts host paths. 1Password posting closed; Zapier is Americas-only.</span></div><div class="res err">0/10</div></div>
+    <div class="phase"><div><div class="name">Phase 2 — HR Outreach Emails</div><span class="note">19 harvested across ~12 content searches → 2 already-contacted → 17 sent. Browser scroll detaches the CDP bridge, so harvest was initial-load only (no infinite scroll). Sent via SMTP (browser Gmail-UI send unavailable).</span></div><div class="res warn">17/40</div></div>
     <div class="phase"><div><div class="name">Phase 3 — HTML Report + WhatsApp</div><span class="note">Published to GitHub Pages; WA summary fired.</span></div><div class="res ok">done</div></div>
   </section>
 
   <section>
-    <h2>Easy Apply — 4 submitted</h2>
+    <h2>Easy Apply — 2 submitted</h2>
     <table>
       <tr><th>#</th><th>Company</th><th>Role</th><th>Mode</th><th>Stack</th></tr>
-      <tr><td>1</td><td>Daftra</td><td>Front-End Tech Lead | SaaS</td><td>Egypt Remote</td><td><span class="tag react">React</span></td></tr>
-      <tr><td>2</td><td>SSC HR Solutions</td><td>Senior Frontend Developer (Banking)</td><td>Cairo On-site</td><td><span class="tag react">React</span></td></tr>
-      <tr><td>3</td><td>Coptic Orphans</td><td>SR. Full Stack Developer</td><td>Cairo On-site</td><td><span class="tag">Frontend</span></td></tr>
-      <tr><td>4</td><td>Conquer AI</td><td>Software Engineer</td><td>Remote EMEA</td><td><span class="tag">Frontend</span></td></tr>
+      <tr><td>1</td><td>Systems Limited — Egypt</td><td>Full Stack Engineer</td><td>Cairo Hybrid</td><td><span class="tag react">React</span> <span class="tag react">Next</span> <span class="tag">TS</span></td></tr>
+      <tr><td>2</td><td>RAMY AYOUB GROUP</td><td>Contracted WordPress &amp; Angular Developer</td><td>Alexandria Remote</td><td><span class="tag">Angular</span></td></tr>
     </table>
   </section>
 
   <section>
-    <h2>Easy Apply — skipped (why not 10)</h2>
+    <h2>Easy Apply — checked &amp; skipped (why not 10)</h2>
     <table>
-      <tr><th>Company</th><th>Reason</th></tr>
-      <tr><td>QNBeyond Plus</td><td>React Native <em>mobile</em> role — off Ahmed's web-React stack; declined to fabricate iOS/Flipper experience</td></tr>
-      <tr><td>Propel</td><td>Requires 7+ yrs backend Python + shipped production LLM systems — mid-level frontend mismatch</td></tr>
-      <tr><td>Foodics</td><td>PHP 7/8 backend-heavy full-stack (SQL/Redis/queueing) — honest answers = non-fit</td></tr>
-      <tr><td>Crossing Hurdles (×5)</td><td>Ceipal ATS work-experience page silently blocks at step 3/5 — unrecoverable</td></tr>
-      <tr><td>Hays</td><td>Requires EU citizenship / EU freelancer VAT / visa sponsorship — region rule skip</td></tr>
-      <tr><td>dopay, InnovationTeam, Advansys, FINN, SAQAYA, Foodics</td><td>Already applied on prior daily runs</td></tr>
+      <tr><th>Company / Role</th><th>Reason</th></tr>
+      <tr><td>FINN — Senior Frontend Engineer / Frontend Lead</td><td>No Easy Apply — external "I'm interested" (off-platform)</td></tr>
+      <tr><td>Crossing Hurdles (×several)</td><td>No Easy Apply — external staffing aggregator</td></tr>
+      <tr><td>Octane — Front End Engineer (Cairo)</td><td>No Easy Apply — external apply link</td></tr>
+      <tr><td>Zazu Digital Talent — Senior Web Developer</td><td>No Easy Apply — promoted/external</td></tr>
+      <tr><td>Loynova — Senior Software Engineer</td><td>.NET microservices senior (5+ yrs .NET, ASP.NET Core, K8s) — off-stack</td></tr>
+      <tr><td>Astek — Mobile App Developer / LVJ — Senior RN+BLE</td><td>Native/React-Native mobile — off Ahmed's web-React stack</td></tr>
+      <tr><td>FlairsTech — Development Manager (Agentic)</td><td>Management role, not IC frontend</td></tr>
+      <tr><td>Lead Liaison — Senior Product Owner · Loynova — Flutter</td><td>Non-dev / Flutter — not a fit</td></tr>
     </table>
   </section>
 
   <section>
-    <h2>Outreach Sent — 7 emails</h2>
+    <h2>Outreach Sent — 17 emails</h2>
     <table>
-      <tr><th>#</th><th>Role / Company</th><th>Email</th></tr>
-      <tr><td>1</td><td>Front-End Developer (React.js) — HRMC, Egypt</td><td>careers@hrmc.services</td></tr>
-      <tr><td>2</td><td>Senior React Engineer — RE Partners</td><td>liudmila.k@re-partners.com</td></tr>
-      <tr><td>3</td><td>Full Stack (Node/React/Vue) — Nityo</td><td>ahmad.ridho@nityo.com</td></tr>
-      <tr><td>4</td><td>Senior Full Stack (Node+React) — BigStep Tech</td><td>geeta.pokhariya@bigsteptech.com</td></tr>
-      <tr><td>5</td><td>Senior Frontend (Angular+React) — software house</td><td>mw842824@gmail.com</td></tr>
-      <tr><td>6</td><td>Web / UI Developer — Tramo</td><td>hr@tramo.in</td></tr>
-      <tr><td>7</td><td>Freelance Web Developer — Egypt</td><td>hamdy99emad99@gmail.com</td></tr>
+      <tr><th>#</th><th>Company / Source</th><th>Email</th></tr>
+      <tr><td>1</td><td>Seffcon (React/Node)</td><td>hima@seffcon.com</td></tr>
+      <tr><td>2</td><td>Frontend SWE (Remote) — recruiter</td><td>anshikajobdaddy@gmail.com</td></tr>
+      <tr><td>3</td><td>Diginovia (React/TanStack)</td><td>hr@diginovia.com</td></tr>
+      <tr><td>4</td><td>Grow9x</td><td>career@grow9x.com</td></tr>
+      <tr><td>5</td><td>Aidewiser</td><td>recruit@aidewiser.co.in</td></tr>
+      <tr><td>6</td><td>Recruiter (Mayank)</td><td>mayank.gupta031296@gmail.com</td></tr>
+      <tr><td>7</td><td>Pearls IT Hub</td><td>hrpearlsithub@gmail.com</td></tr>
+      <tr><td>8</td><td>Convico</td><td>hr@convico.in</td></tr>
+      <tr><td>9</td><td>InverseAI</td><td>career@inverseai.com</td></tr>
+      <tr><td>10</td><td>Recruiter (Goma)</td><td>k.goma959@gmail.com</td></tr>
+      <tr><td>11</td><td>Recruiter (Cliven)</td><td>clivenjikizan@gmail.com</td></tr>
+      <tr><td>12</td><td>AOP — HR</td><td>hrexecutiveaop@gmail.com</td></tr>
+      <tr><td>13</td><td>Competent Recruitment</td><td>hr@competentrec.com</td></tr>
+      <tr><td>14</td><td>Migration IT (Egypt)</td><td>nkhairy@migrationit.com</td></tr>
+      <tr><td>15</td><td>Outsource (Egypt)</td><td>omnia.outsource25@gmail.com</td></tr>
+      <tr><td>16</td><td>Recruiter (Abanoub, Egypt)</td><td>abanoopl.nabih96@gmail.com</td></tr>
+      <tr><td>17</td><td>Recruiter (Suleman)</td><td>sulemanakram.ak@gmail.com</td></tr>
     </table>
   </section>
 
   <section>
     <h2>Bounces &amp; Dedupes</h2>
     <ul class="blockers">
-      <li><div class="t" style="color:var(--green)">Bounced (0)</div><div class="d">No bounces observed on the 7 sends.</div></li>
-      <li><div class="t">Skipped, already contacted (4)</div><div class="d">careers@turn2grow.com · kariman@swordegypt.net · hr@totplatform.com · careers@aman.eg (all prior-run lifetime sends per IMAP).</div></li>
-      <li><div class="t">Skipped, region/fit (4)</div><div class="d">recruitment@wafyapp.com (Jordanian nationals only) · raianne.olivares@ascendion.com (PH-only, BGC full-onsite) · srikar.r@matchlabtalent.com (Django backend, Pune on-site) · sabrish.a@capco.com (Pune/Bangalore on-site, 7–12 yrs)</div></li>
+      <li><div class="t" style="color:var(--green)">Bounced (0)</div><div class="d">No SMTP errors on the 17 sends; all accepted by Gmail and auto-filed to Sent (dedup preserved for next run).</div></li>
+      <li><div class="t">Skipped, already contacted (2)</div><div class="d">umeshsinghkiller@gmail.com · hr.nouran@zikolaa.com (prior-run lifetime sends per IMAP).</div></li>
     </ul>
   </section>
 
   <section>
     <h2>Blockers / Notes</h2>
     <ul class="blockers">
-      <li><div class="t" style="color:var(--red)">CV upload broken → Phase 1b = 0</div><div class="d">From a public HTTPS origin, Chrome now blocks the fetch to https://cv.localhost/cv.pdf: without an override it hangs (Private Network Access preflight), with targetAddressSpace:'private' it fails "Failed to fetch" (self-signed portless cert not trusted for subresource fetches). file_upload MCP also stopped accepting host paths. curl returns 200; browser can't. No working upload path this session → Paperpile and all board applies skipped. Fix next run: add ~/.portless/ca.pem to Chrome/system trust, or a file_upload variant taking base64.</div></li>
-      <li><div class="t">LinkedIn split-pane detail hangs on promoted/agency posts</div><div class="d">Crossing Hurdles &amp; Conquer AI right-pane spun 15–28s, so the Easy Apply button never rendered. Worked around by opening /jobs/view/&lt;id&gt;/ directly. That overlay has no role="dialog" — scope the modal via the "Apply to" heading → nearest "X/Y pages" container.</div></li>
-      <li><div class="t">Ceipal ATS work-experience trap</div><div class="d">Crossing Hurdles' 5-page form refuses to advance past 3/5 — a profile experience entry sits in an open edit panel; Saving it still blocked (missing City). Skip Ceipal agency postings.</div></li>
-      <li><div class="t">Gmail multi-account</div><div class="d">IMAP drafts land in ahmed.bis.iti@gmail.com = browser account u/1 (u/0 is devya.solutions). Send loop must target /u/1/. Drafts open minimized — expand, verify recipient, then click Send.</div></li>
-      <li><div class="t">Content-search email yield low</div><div class="d">Egypt/remote frontend "send-CV" posts are thin and heavily already-contacted; many results are apply-by-link or EU/PH/India region-locked. 15 unique harvested, 7 net-new after filters.</div></li>
+      <li><div class="t" style="color:var(--red)">CV upload infra down → Phase 1b = 0</div><div class="d">portless CLI missing from PATH (found under nvm bin) and the :443 proxy daemon is not running, so https://cv.localhost/cv.pdf does not route (fetch hangs / times out). MCP file_upload now rejects host filesystem paths entirely ("must pass file contents"). No working upload path → Paperpile (worldwide React/TS, everything else filled) could not submit its required resume. Fix next run: start portless proxy (needs sudo) or add a base64 upload path.</div></li>
+      <li><div class="t" style="color:var(--red)">Chrome CDP bridge unstable all session</div><div class="d">Extension bridge froze on promoted-job screenshots (Page.captureScreenshot timeouts) and after a 45s hung cv.localhost fetch — tab group had to be recreated twice. Any scroll (native or JS) or heavy JS eval detaches the session ("Couldn't determine which page"). Workarounds: JS-only driving on promoted jobs, short sync JS calls, fail→immediate-retry.</div></li>
+      <li><div class="t">LinkedIn f_AL flooded by external-apply promoted posts</div><div class="d">The Easy-Apply filter now surfaces mostly promoted staffing posts (FINN, Crossing Hurdles, Octane, Zazu) that route to external "I'm interested" apply, not real Easy Apply. Genuine Easy-Apply frontend roles for Egypt this week ≈ 2.</div></li>
+      <li><div class="t">Content-search harvest capped by no-scroll</div><div class="d">DOM redesign removed feed-shared-update / urn markers; harvest rewritten to a lightweight innerText+regex+string-slice scan with a localStorage accumulator. Scrolling detaches the bridge, so only initial-load posts per query were reachable → 19 harvested vs. a normal full-scroll run.</div></li>
+      <li><div class="t">Radio screening questions need ref-click</div><div class="d">LinkedIn Easy-Apply Yes/No radios have empty label[for] text and don't register via input.click() / form_input alone — resolve the option with find → click the label ref (computer tool). Otherwise "This field is required" blocks Review.</div></li>
     </ul>
   </section>
 
   <section>
     <h2>Routine Changes Today</h2>
     <ul class="changes">
-      <li>Easy Apply: added /jobs/view/&lt;id&gt;/ fallback for hung split-panes; modal scoped via "Apply to" heading → "X/Y pages" container (no role=dialog). Saved to memory.</li>
-      <li>Skip Ceipal-form agency postings (work-experience validation trap).</li>
-      <li>Harvest: TreeWalker email-proximity scan + click "… more" toggles (button text is "… more" with a space) to reveal hidden emails; now require a hiring signal AND exclude seeker ("open to work") posts.</li>
-      <li>Gmail send: use account index u/1; drafts open minimized → expand then click Send (⌘⏎ unreliable while minimized).</li>
-      <li>CV-upload procedure flagged broken (PNA + cert-in-fetch + file_upload path rejection); Phase 1b skipped and documented for next run.</li>
+      <li>Phase 2 harvester rewritten: single <code>document.body.innerText</code> read + email regex + ±700-char context slice + hiring-signal filter, accumulated in <code>localStorage.__hrv</code>. Heavy TreeWalker-over-DOM detaches the CDP bridge; the string-slice version is light enough to survive.</li>
+      <li>Phase 2 send moved from Gmail UI to SMTP (<code>smtp_send_phase2.py</code>, same Gmail app-password as IMAP) because the browser Gmail-UI flow is unusable this session. Gmail auto-files SMTP sends to Sent, so IMAP dedup still works next run.</li>
+      <li>Easy Apply radios: resolve Yes/No via find → click label ref (computer tool); form_input/DOM-click don't update React state.</li>
+      <li>Browser hygiene: drive promoted jobs with JS only (screenshots freeze the renderer); avoid scroll (detaches bridge); keep JS calls short and sync; retry once on "Couldn't determine which page".</li>
+      <li>CV upload flagged broken again (portless proxy down + file_upload path rejection); Phase 1b skipped and documented.</li>
     </ul>
   </section>
 
