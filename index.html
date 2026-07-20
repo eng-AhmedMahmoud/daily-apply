@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Apply Report — 2026-07-19</title>
+<title>Daily Apply Report — 2026-07-20</title>
 <style>
   :root{
     --bg:#0b0d10; --card:#14181d; --text:#e7ecf2; --muted:#7d8997;
@@ -22,109 +22,90 @@
   .ok{color:var(--green)} .warn{color:var(--amber)} .err{color:var(--red)}
   section{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px}
   section h2{font-size:14px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
-  .phase{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
-  .phase:last-child{border:none}
-  .phase .name{font-weight:500}
-  .phase .res{font-variant-numeric:tabular-nums}
-  .note{color:var(--muted);font-size:12px;display:block;margin-top:2px}
   table{width:100%;border-collapse:collapse;font-size:13px}
-  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--border);vertical-align:top}
-  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+  th{color:var(--muted);text-align:left;font-weight:500;padding:6px 8px;border-bottom:1px solid var(--border)}
+  td{padding:6px 8px;border-bottom:1px solid var(--border)}
   tr:last-child td{border-bottom:none}
-  .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;background:#1b2430;color:var(--muted);border:1px solid var(--border)}
-  .tag.react{background:#12241f;color:var(--green);border-color:#1c3a2f}
-  ul.blockers{list-style:none;padding:0;margin:0}
-  ul.blockers li{padding:8px 0;border-bottom:1px solid var(--border)}
-  ul.blockers li:last-child{border:none}
-  ul.blockers .t{font-weight:500;color:var(--amber)}
-  ul.blockers .d{color:var(--muted);font-size:13px;margin-top:2px}
-  ul.changes li{padding:4px 0;font-size:13px}
-  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
+  ul{margin:0;padding-left:18px}
+  li{margin:6px 0}
+  .t{font-weight:600}
+  .d{color:var(--muted);font-size:13px}
+  code{background:#0b0d10;border:1px solid var(--border);border-radius:4px;padding:0 4px;font-size:12px}
+  .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;border:1px solid var(--border);vertical-align:middle}
+  .tag.g{color:var(--green)} .tag.a{color:var(--amber)} .tag.r{color:var(--red)}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:20px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Daily Apply Report</h1>
-  <div class="sub">2026-07-19 · Ahmed Mahmoud · ahmed.bis.iti@gmail.com</div>
+  <div class="sub">2026-07-20 · Ahmed Mahmoud · React / Next.js Frontend · Egypt-first</div>
 
   <div class="grid">
-    <div class="stat"><div class="n ok">10<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">LinkedIn Easy Apply</div></div>
-    <div class="stat"><div class="n err">0<span style="color:var(--muted);font-size:14px">/10</span></div><div class="l">Remote Boards</div></div>
-    <div class="stat"><div class="n warn">2<span style="color:var(--muted);font-size:14px">/40</span></div><div class="l">HR Outreach</div></div>
+    <div class="stat"><div class="n warn">6/10</div><div class="l">LinkedIn Easy Apply</div></div>
+    <div class="stat"><div class="n err">0/10</div><div class="l">Remote Boards</div></div>
+    <div class="stat"><div class="n warn">1/40</div><div class="l">HR Outreach Emails</div></div>
   </div>
 
   <section>
-    <h2>Phase Detail</h2>
-    <div class="phase"><div><div class="name">Phase 1 — LinkedIn Easy Apply</div><span class="note">Full 10/10. Egypt pool thin (9 postings, 2 already applied) → broadened to MENA then Remote-Worldwide. 3 Egypt on-site/CRO + 7 remote React/Vue/frontend. 2 further postings skipped on region/stack (see below).</span></div><div class="res ok">10/10</div></div>
-    <div class="phase"><div><div class="name">Phase 1b — Remote Boards (Jobspresso)</div><span class="note">Paperpile (Workable, worldwide TS/React) required two free-text essays — a "no AI boilerplate" cover letter + a specific challenging-project story. Won't fabricate a project → skipped per essay rule. Remaining Jobspresso tech roles are US giants (Airbnb, Zapier, 1Password, Rula, Super) behind work-auth + essay/login walls.</span></div><div class="res err">0/10</div></div>
-    <div class="phase"><div><div class="name">Phase 2 — HR Outreach Emails</div><span class="note">12 emails harvested across ~8 content searches. 7 were lifetime-dedup skips (already contacted in prior runs), 3 dropped as off-region/suspicious → 2 fresh sent via SMTP. LinkedIn content search is heavily throttled (~3 posts/query) and most hiring posts now use "View job"/phone/DM, not email.</span></div><div class="res warn">2/40</div></div>
-    <div class="phase"><div><div class="name">Phase 3 — HTML Report + WhatsApp</div><span class="note">Published to GitHub Pages; WA summary fired.</span></div><div class="res ok">done</div></div>
-  </section>
-
-  <section>
-    <h2>Easy Apply — 10 submitted</h2>
+    <h2>Phase 1 — LinkedIn Easy Apply <span class="tag a">partial 6/10</span></h2>
     <table>
-      <tr><th>#</th><th>Company</th><th>Role</th><th>Mode</th><th>Stack</th></tr>
-      <tr><td>1</td><td>Valleysoft — Center of Excellence</td><td>React.js &amp; React Native Developer</td><td>Cairo, Egypt (On-site)</td><td><span class="tag react">React</span> <span class="tag react">React Native</span></td></tr>
-      <tr><td>2</td><td>Masarat Tech</td><td>Senior Frontend Developer Vue.js</td><td>6 October, Egypt (On-site)</td><td><span class="tag">Vue</span></td></tr>
-      <tr><td>3</td><td>Five Brothers Marketing</td><td>E-Commerce UI Designer (Website, Landing Pages &amp; CRO)</td><td>Nasr City, Cairo</td><td><span class="tag">Frontend</span> <span class="tag">CRO</span></td></tr>
-      <tr><td>4</td><td>Jobgether</td><td>Software Craftsperson / Node.js / React.js / AI</td><td>Remote (Worldwide)</td><td><span class="tag react">React</span> <span class="tag">Node</span></td></tr>
-      <tr><td>5</td><td>Envision Technology Solutions</td><td>React JS + React Native Developer</td><td>Remote</td><td><span class="tag react">React</span> <span class="tag react">React Native</span></td></tr>
-      <tr><td>6</td><td>Cyberobotix</td><td>React JS + React Native Developer</td><td>Remote</td><td><span class="tag react">React</span> <span class="tag react">React Native</span></td></tr>
-      <tr><td>7</td><td>Yochana</td><td>Sr. Front-End Developer (React, Redux)</td><td>Remote</td><td><span class="tag react">React</span> <span class="tag">Redux</span></td></tr>
-      <tr><td>8</td><td>Spait Infotech</td><td>React JS Developer</td><td>Remote (Toronto)</td><td><span class="tag react">React</span></td></tr>
-      <tr><td>9</td><td>LongWave</td><td>Senior Frontend Developer</td><td>Remote (Tokyo)</td><td><span class="tag">Frontend</span> <span class="tag">TS</span></td></tr>
-      <tr><td>10</td><td>Atrium (EMEA)</td><td>Frontend Developer</td><td>Remote (EMEA)</td><td><span class="tag">Vue</span> <span class="tag">JS</span></td></tr>
+      <tr><th>Company</th><th>Role</th><th>Mode</th><th>Stack</th></tr>
+      <tr><td>Brightskies</td><td>Senior Frontend Developer</td><td>Cairo · Hybrid</td><td>generic-frontend</td></tr>
+      <tr><td>lo la</td><td>Senior React Native Developer</td><td>New Cairo · On-site</td><td>React</td></tr>
+      <tr><td>IN3 Technology</td><td>Product Engineering Lead</td><td>Cairo · Hybrid</td><td>generic-frontend</td></tr>
+      <tr><td>Zetheta Algorithms</td><td>Software Engineer</td><td>EMEA · Remote</td><td>generic-frontend</td></tr>
+      <tr><td>FlairsTech</td><td>Full Stack Engineer</td><td>Cairo (Maadi) · Hybrid</td><td>Angular</td></tr>
+      <tr><td>Premier Services &amp; Recruitment</td><td>Forward Deployed Engineer II</td><td>Cairo (Maadi) · Hybrid</td><td>generic-frontend</td></tr>
     </table>
   </section>
 
   <section>
-    <h2>Easy Apply — checked &amp; skipped</h2>
-    <table>
-      <tr><th>Company / Role</th><th>Reason</th></tr>
-      <tr><td>FINN — Frontend Lead · Crossing Hurdles — Full Stack Developer</td><td>Already applied in a prior run (LinkedIn shows "Applied")</td></tr>
-      <tr><td>ScolerTec — Lead Front-End Developer (ReactJS)</td><td>US work-authorization gate — form asks visa sponsorship (yes) + legally authorized in US (no). Skip per region rules.</td></tr>
-      <tr><td>LevelUP HCS — Senior Software Engineer</td><td>Embedded/low-level role (Android, Cryptography, Embedded Linux, C/C++ 8&nbsp;yrs) + relocate to Abu Dhabi. Off-stack.</td></tr>
-      <tr><td>Loynova — Senior Flutter Developer</td><td>Flutter mobile — off Ahmed's web-React stack</td></tr>
-    </table>
+    <h2>Phase 1b — Remote Boards <span class="tag r">blocked 0/10</span></h2>
+    <ul>
+      <li><div class="t">Jobspresso scraped: 30 jobs, 7 relevant.</div><div class="d">Best target Paperpile (Workable, worldwide, TypeScript+React): form fully prefilled from a prior session, blocked only on the required resume attach.</div></li>
+      <li><div class="t err">CV injection path is dead.</div><div class="d">The Chrome extension now stalls <em>every</em> page-origin request to localhost — <code>fetch</code> to <code>cv.localhost</code> and <code>127.0.0.1:8766</code> both hang until abort, and a hidden-iframe postMessage relay never even reaches the server. The PNA (<code>Access-Control-Allow-Private-Network</code>) header didn't help. MCP <code>file_upload</code> also removed host-path support ("must pass contents via the files parameter"). No auto-upload route remains for Workable/Greenhouse/Lever.</div></li>
+    </ul>
   </section>
 
   <section>
-    <h2>Outreach Sent — 2 emails</h2>
+    <h2>Phase 2 — HR Outreach <span class="tag a">1 sent · 5 deduped</span></h2>
     <table>
-      <tr><th>#</th><th>Company / Source</th><th>Email</th></tr>
-      <tr><td>1</td><td>ElectroPi (frontend hiring, Egypt)</td><td>ayatallah.ramadan.abdo@electropi.com</td></tr>
-      <tr><td>2</td><td>99brightminds (React + AEM/CMS, Egypt Remote)</td><td>jobs@99brightminds.com</td></tr>
+      <tr><th>#</th><th>Company</th><th>Email</th></tr>
+      <tr><td>1</td><td>Andor Tech — React + SignalR, 5+ yrs, full-time</td><td>anusha.shetty@andortech.com</td></tr>
     </table>
+    <div class="d" style="margin-top:8px">Sent from Gmail UI (/u/1/), "Message sent" confirmed. Draft created via IMAP so lifetime dedup stays intact next run.</div>
   </section>
 
   <section>
     <h2>Bounces &amp; Dedupes</h2>
-    <ul class="blockers">
-      <li><div class="t" style="color:var(--green)">Bounced (0)</div><div class="d">No SMTP errors; both sends accepted by Gmail and auto-filed to Sent (verified via IMAP — dedup preserved for next run).</div></li>
-      <li><div class="t">Skipped, already contacted (7)</div><div class="d">hr@infiniti.dev · careers@turn2grow.com · aelbosily@cubeegypt.com · hany.k@carrycodes.com · hanan.magdy@sky-grp.com · liudmila.k@re-partners.com · careers@aman.eg — all lifetime prior sends per IMAP.</div></li>
-      <li><div class="t">Dropped, off-region / suspicious (3)</div><div class="d">thypnm1@tinhvan.com (Vietnam, on-site) · yazid.b@avowstech.com (Jakarta, on-site) — outside region priority. carine@contractsigned.net — generic/suspicious domain, no hiring context.</div></li>
+    <ul>
+      <li><div class="t" style="color:var(--green)">Bounced (0)</div><div class="d">Single send accepted by Gmail.</div></li>
+      <li><div class="t">Skipped, already contacted (5)</div><div class="d">hr@infiniti.dev · jobs@99brightminds.com · hr@theartclick.com · hr.nouran@zikolaa.com · hanan.magdy@sky-grp.com — lifetime prior sends per IMAP.</div></li>
+      <li><div class="t">Dropped (4)</div><div class="d">careers@competentrec.com (design role, not frontend) · HR@spirospathis.com (no tech context) · cairojerome@gmail.com (job-seeker pattern) · magdy@sky-grp.com (partial duplicate of hanan.magdy@).</div></li>
     </ul>
   </section>
 
   <section>
     <h2>Blockers / Notes</h2>
-    <ul class="blockers">
-      <li><div class="t" style="color:var(--red)">HR-outreach email supply exhausted after dedup</div><div class="d">LinkedIn content search returns only ~3 posts per query (heavy throttle) and most Egypt/MENA hiring posts now route via "View job", a phone number, or DM — not an email. Of 12 email-bearing posts found across 8 queries, 7 were already contacted in prior runs and 3 were off-region → only 2 genuinely new recipients. This is a supply ceiling, not a send failure.</div></li>
-      <li><div class="t">Feed hydration needs a real wheel-scroll</div><div class="d">Content-search results render as an obfuscated-class shell (body innerText ~1.8&nbsp;KB) until a native scroll fires LinkedIn's lazy loader; JS <code>scrollBy</code> alone does not hydrate. Emails are also hidden behind "…more" truncation and must be expanded before harvest.</div></li>
-      <li><div class="t">One CDP bridge hiccup (recovered)</div><div class="d">A heavy DOM-scan JS eval detached the session once ("Couldn't determine which page"); re-established via tabs_context_mcp and continued. Kept subsequent scans tighter to avoid repeats.</div></li>
-      <li><div class="t">Phase 1b is essay/auth-gated end to end</div><div class="d">Jobspresso's tech feed is dominated by US-headquartered giants (Airbnb, Zapier, 1Password, Rula, Super) whose ATS forms require US/CA work authorization and multi-paragraph essays. The one worldwide role (Paperpile) required a non-templated cover letter + a specific project narrative. No clean auto-submittable board apply today.</div></li>
+    <ul>
+      <li><div class="t err">Boards CV upload blocked end-to-end</div><div class="d">See Phase 1b — this is an extension-behavior change, not a site change. Options for tomorrow: pre-stage CV inside Workable account, or ask Anthropic/extension settings for localhost site permission.</div></li>
+      <li><div class="t">Ceipal-ATS agency flood</div><div class="d">Crossing Hurdles (Ceipal) occupies 4+ of the top MENA/EMEA Easy Apply slots; all skipped per work-exp-trap policy.</div></li>
+      <li><div class="t">Egypt search tail is junk</div><div class="d">Beyond rank ~7, results are PM/CTO/Flutter/Quantity-Surveyor roles; only 7 of ~25 harvested IDs were frontend. 6 applies ≈ the day's supply of clean frontend Easy Apply posts.</div></li>
+      <li><div class="t">Mismatch questionnaires skipped honestly</div><div class="d">LVJ Soft (React Native + BLE/embedded, 9 hardware questions) skipped — honest answers all "No/0". Adree (OutSystems, 6-page Workable) skipped as niche mismatch.</div></li>
+      <li><div class="t">FINN posts are external-apply</div><div class="d">Both FINN frontend roles appear under f_AL=true but have no Easy Apply button.</div></li>
+      <li><div class="t">Email supply ceiling persists</div><div class="d">10 unique addresses across 9 content-search queries; 5 already contacted in prior runs. Same throttled ~1-page rendering as yesterday.</div></li>
     </ul>
   </section>
 
   <section>
     <h2>Routine Changes Today</h2>
-    <ul class="changes">
-      <li>Easy Apply modal on Workable-backed posts renders <strong>without</strong> <code>role="dialog"</code> — scope it by finding the "Apply to&nbsp;…" heading and walking up to the container that holds the "X/Y pages" progress + form (jobsview bypass held).</li>
-      <li>Yes/No screening radios: <code>input.click()</code> is ignored (custom control). Click the <code>label[for=id]</code> element instead, CSS-escaping the obfuscated <code>«rXX»</code> ids.</li>
-      <li>"Notice Period" numeric field rejects "30 days" as <em>Invalid input</em> — must be a bare number ("30"). Same for salary/experience QA fields (numbers only).</li>
-      <li>Phase 2 harvester: pick the <em>smallest</em> element whose innerText contains each email (tight context), accumulate in <code>localStorage.__hr_accum</code>, and expand every "…more" before scanning (emails live in the truncated tail).</li>
-      <li>Phase 2 sent via SMTP (<code>smtp_send_phase2.py</code>, same Gmail app-password as IMAP) — reliable, and Gmail auto-files to Sent so IMAP dedup keeps working next run.</li>
+    <ul>
+      <li>cvserver2.py upgraded to <code>ThreadingTCPServer</code> + PNA header (kept for future runs; wasn't the blocker).</li>
+      <li>LinkedIn QA fields: synthetic <code>value</code> setter updates the char counter but validation still fails — must click the field by coordinate and type real keystrokes.</li>
+      <li>Salary / notice-period / experience QA inputs are numeric-only ("50000", "30", "2").</li>
+      <li>Zetheta-style single-page Easy Apply modal exists (no page counter, direct Submit).</li>
+      <li>Gmail: compose opens minimized after opening a draft — click the compose bar bottom-right, then <code>cmd+Return</code>.</li>
     </ul>
   </section>
 
