@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Apply Report — 2026-08-12</title>
+<title>Daily Apply Report — 2026-08-31</title>
 <style>
   :root{
     --bg:#0b0d10; --card:#14181d; --text:#e7ecf2; --muted:#7d8997;
@@ -24,7 +24,7 @@
   section h2{font-size:14px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th{color:var(--muted);text-align:left;font-weight:500;padding:6px 8px;border-bottom:1px solid var(--border)}
-  td{padding:6px 8px;border-bottom:1px solid var(--border)}
+  td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
   tr:last-child td{border-bottom:none}
   ul{margin:0;padding-left:18px}
   li{margin:6px 0}
@@ -35,111 +35,140 @@
   .tag.g{color:var(--green);border-color:#14532d;background:#08160d}
   .tag.a{color:var(--amber);border-color:#78350f;background:#1f1608}
   .tag.r{color:var(--red);border-color:#7f1d1d;background:#1f0e0e}
+  .cols{column-count:2;column-gap:18px;font-size:13px}
+  .cols div{break-inside:avoid;padding:2px 0;color:var(--muted)}
   footer{color:var(--muted);font-size:12px;text-align:center;margin-top:20px}
 </style>
 </head>
 <body>
-<body>
 <div class="wrap">
   <h1>Daily Apply Report</h1>
-  <div class="sub">2026-08-12 · Ahmed Mahmoud · React / Next.js Frontend · Egypt/MENA-first</div>
+  <div class="sub">2026-08-31 · Ahmed Mahmoud · React / Next.js Frontend · Egypt/MENA-first</div>
 
   <div class="grid">
     <div class="stat"><div class="n warn">5 / 10</div><div class="l">LinkedIn Easy Apply</div></div>
     <div class="stat"><div class="n err">0 / 10</div><div class="l">Remote Boards</div></div>
-    <div class="stat"><div class="n warn">12 / 40</div><div class="l">HR Outreach Emails</div></div>
+    <div class="stat"><div class="n warn">30 / 40</div><div class="l">HR Outreach Emails</div></div>
   </div>
 
   <section>
     <h2>Phase 1 — LinkedIn Easy Apply (5/10)</h2>
     <table>
       <tr><th>Company</th><th>Role</th><th>Location</th><th>Stack</th></tr>
-      <tr><td>Fekra Technologies</td><td>Senior Frontend Developer</td><td>Egypt · Remote</td><td>React</td></tr>
-      <tr><td>Popcorn</td><td>Senior Full Stack Engineer</td><td>Cairo · On-site</td><td>TypeScript / Node</td></tr>
-      <tr><td>Orascom Hotels Management</td><td>Junior Web Developer</td><td>Cairo · On-site</td><td>generic frontend</td></tr>
-      <tr><td>Digital Zone</td><td>Engineering Manager</td><td>Egypt · Remote</td><td>generic frontend</td></tr>
-      <tr><td>Mindrift</td><td>Chatbot Developer (Freelance)</td><td>Egypt · Remote</td><td>generic frontend</td></tr>
+      <tr><td>Confidential Careers</td><td>Full Stack Developer (React, Next.js, PHP)</td><td>New Cairo · On-site</td><td>React / Next</td></tr>
+      <tr><td>Systems Limited — Egypt</td><td>Full Stack (React + Node.js)</td><td>Cairo · On-site</td><td>React</td></tr>
+      <tr><td>Bnsights</td><td>Lead User Interface</td><td>Cairo · Hybrid</td><td>generic frontend</td></tr>
+      <tr><td>SAQAYA</td><td>Senior Full Stack Engineer</td><td>Cairo · Hybrid</td><td>React</td></tr>
+      <tr><td>Mondia</td><td>Senior FullStack Engineer</td><td>Cairo · On-site</td><td>Vue / Node</td></tr>
     </table>
-    <p class="d" style="margin-bottom:0">All 5 are Egypt-based (3 remote-from-Egypt, 2 Cairo on-site). Screening answers stayed truthful: React 2 yrs, JavaScript 2 yrs, production web apps 2 yrs, REST-API integration 2 yrs, TypeScript 1 yr, backend TS/JS 2 yrs, English 9/10 · Native-or-bilingual, expected 60,000 EGP / $1,200 per month, notice 30 days.</p>
+    <p class="d" style="margin-bottom:0">All 5 are Egypt-based (Cairo/New Cairo). Screening answers stayed truthful: React 2 yrs, JavaScript 2 yrs, UI/front-end 2 yrs, Vue 1 yr, Angular 1 yr, ASP.NET 0, Python 0; English native-or-bilingual; current 50,000 EGP, expected 60,000 EGP net/month; notice 30 days. Where a screen asked about a stack Ahmed does not have (PHP CodeIgniter, AWS ownership), the answer was <span class="t">No</span> rather than an overclaim — see below.</p>
+  </section>
+
+  <section>
+    <h2>Honesty calls made on screening questions</h2>
+    <table>
+      <tr><th>Employer</th><th>Question</th><th>Answer given</th></tr>
+      <tr><td>Confidential Careers</td><td>"Do you have experience working with React, Next.js, <em>and PHP CodeIgniter</em>?"</td><td><strong>No</strong> — React/Next yes, CodeIgniter no. Answering Yes would have claimed CodeIgniter experience he does not have.</td></tr>
+      <tr><td>Mondia</td><td>"Have you worked with AWS or another cloud-native platform in production? Describe what you built."</td><td>Stated plainly that production work has been frontend-focused and he has not owned cloud infrastructure; infra was handled by platform teams.</td></tr>
+      <tr><td>Mondia</td><td>"Years with Vue.js + Node.js/NestJS, and your most recent project using both?"</td><td>"1 year Vue, 3 years Node.js; main stack React/Next.js" — and explicitly no recent project combining Vue + NestJS.</td></tr>
+    </table>
   </section>
 
   <section>
     <h2>Skipped (Phase 1) — with reason</h2>
     <table>
       <tr><th>Company</th><th>Role</th><th>Reason</th></tr>
-      <tr><td>Systems Limited Egypt</td><td>Senior React Native Developer</td><td>Screen opens with "years of work experience with React Native". No RN production experience to claim — skipped rather than inflate.</td></tr>
-      <tr><td>Pharco Corporation</td><td>Full Stack Engineer</td><td>Alexandria on-site; "comfortable commuting to this job's location" cannot be answered Yes from Cairo.</td></tr>
-      <tr><td>Loynova</td><td>Senior Software Engineer</td><td>.NET microservices, ASP.NET Core + C#, Angular with OIDC, Docker + Kubernetes in production. Honest answers are No across the board.</td></tr>
-      <tr><td>Mo Works</td><td>Lead Software Engineer</td><td>Hard requirement: full-time on a Melbourne 09:00–18:00 schedule (≈01:00–10:00 Cairo). Answering No is an auto-reject; not worth the slot.</td></tr>
-      <tr><td>Falcon Innovation Partners</td><td>Agentic Developer</td><td>Screen is Hibernate / Java / Agile years. All-zero honest answers.</td></tr>
-      <tr><td>Aggarly</td><td>Head of Engineering</td><td>Requires professional Python/Django backend experience — hard No.</td></tr>
-      <tr><td>Crossing Hurdles</td><td>Software Engineer | Remote, Full Stack Developer | Remote</td><td>Reposts of listings already applied to (one 1 month ago, one shown as <em>Applied</em>). Also the Ceipal work-experience form.</td></tr>
-      <tr><td>Boubyan, geidea, Augustus Media, Fekra, ELSEWEDY, Xceed, Taqat Techno, J&amp;T Express, Network International, and others</td><td>Backend / QA / AI / project engineering / UI design</td><td>Non-frontend roles surfacing in the Egypt Easy-Apply pool.</td></tr>
+      <tr><td>Loynova</td><td>Senior Software Engineer</td><td>Job body is Senior Full Stack <strong>.NET</strong> — ASP.NET, C#, microservices. Honest answers are 0 across the board.</td></tr>
+      <tr><td>Boubyan Digital Factory</td><td>Website Manager</td><td>Manager role inside the marketing org; asks for CIMA/IFQ-style qualifications. Not a developer post.</td></tr>
+      <tr><td>Discovered MENA</td><td>Design System Lead (Abu Dhabi)</td><td>Good MENA/frontend fit, but the job page never finished hydrating — Easy Apply modal would not open after 4 attempts across ~40 s.</td></tr>
+      <tr><td>Propel</td><td>Senior Software Engineer (Remote)</td><td>Same hydration hang. Two consecutive hangs ended Phase 1 rather than hammering LinkedIn further.</td></tr>
+      <tr><td>Westhouse, Zetheta, hyre, elämä.ai, Crossing Hurdles</td><td>various</td><td>Queued behind the hydration failures; not attempted once Phase 1 was stopped.</td></tr>
+      <tr><td>FINN, Tree Top Staffing</td><td>Senior Frontend Engineer / Software Developer</td><td>Already marked <em>Applied</em> from previous runs.</td></tr>
     </table>
-    <p class="d" style="margin-bottom:0">Pool was thin: 45 unique postings across 8 search permutations (Egypt past-week, Egypt past-month, MENA past-week, "frontend developer" Egypt + remote filter), of which only 12 were on-stack and not already applied to. The Easy-Apply Egypt tier this week skews heavily backend and non-engineering.</p>
   </section>
 
   <section>
     <h2>Phase 1b — Remote boards (0/10)</h2>
-    <p class="d" style="margin:0">Skipped by design, unchanged from the last three runs. Jobspresso routes to Workable / Greenhouse / Lever / Ashby, all of which require a resume file upload, and the Chrome extension still stalls every page-origin localhost request (fetch / XHR / iframe) — the upload path is dead. Unblocking needs either an ATS that accepts a hosted CV URL, or a manual upload session.</p>
+    <p class="d">Jobspresso tech feed scraped (30 listings). Nothing eligible under the region rules:</p>
+    <ul class="d">
+      <li>Dev roles present (1Password ×4, Rula, Super, Airbnb, Samsara, Hopper, Grafana Labs) are all <strong>United States / Canada</strong> only — Egypt-based applicants are excluded, so they fall under the "skip USA/EU work-auth" rule.</li>
+      <li>The nominal best match — <em>1Password · Senior Frontend Developer, Design Systems</em> (Ashby) — is explicitly "United States, Canada". Verified on the listing before skipping.</li>
+      <li>Remainder of the feed is non-dev: forex/crypto trading, commission sales, tutoring, content review, product/marketing management.</li>
+      <li>Board resume uploads remain blocked regardless (see Blockers).</li>
+    </ul>
   </section>
 
   <section>
-    <h2>Phase 2 — HR outreach (12/40)</h2>
-    <table>
-      <tr><th>#</th><th>Company / Contact</th><th>Email</th></tr>
-      <tr><td>1</td><td>QuestWorkx — Amrita (Senior FE, Remote GCC)</td><td>amrita.questworkx@gmail.com</td></tr>
-      <tr><td>2</td><td>JobiN Consulting &amp; HR Service — Neama (Cairo, hybrid)</td><td>recruiter@jobinhrservice.com</td></tr>
-      <tr><td>3</td><td>Tameh — Mina (GCC / MENA)</td><td>hr-careers@tameh.co</td></tr>
-      <tr><td>4</td><td>Iconic IT Consulting — Syed (Abu Dhabi)</td><td>hr1@iconicit.ae</td></tr>
-      <tr><td>5</td><td>EndemandIT (React.js, remote offshore)</td><td>hr@endemandit.com</td></tr>
-      <tr><td>6</td><td>Acesoft Labs — Bhavani (100% remote Senior React)</td><td>durgabhavani.b@acesoftlabs.com</td></tr>
-      <tr><td>7</td><td>JDS Advisory LLP — Monali</td><td>career.jdsadvisory@gmail.com</td></tr>
-      <tr><td>8</td><td>Trust Sphere IT Solutions — Richa</td><td>hr.trustsphere@gmail.com</td></tr>
-      <tr><td>9</td><td>Xtel G Solutions — Ribqah</td><td>talent.xgs@gmail.com</td></tr>
-      <tr><td>10</td><td>Recruitment partner — Soniya (Next.js / React)</td><td>madansoniya02@gmail.com</td></tr>
-      <tr><td>11</td><td>Remote IT hiring — Sangeeta</td><td>officialsangeetavishwakarma@gmail.com</td></tr>
-      <tr><td>12</td><td>Work Opportunity — Neha</td><td>anjalikumariindia1@gmail.com</td></tr>
-    </table>
-    <p class="d" style="margin-bottom:0">12 sent over SMTP (<code>p2_send_2026-08-12.py</code>), 0 failures. Each body now names the specific role from the poster's own text ("Re your post about the &lt;role&gt; opening") instead of the generic opener — the role string is carried in the recipients JSON alongside the name.</p>
+    <h2>Phase 2 — HR outreach (30/40 sent, 0 send failures)</h2>
+    <p class="d">23 LinkedIn content-search queries run. Literal-address queries (<code>"@gmail.com"</code>, <code>"hr@"</code>, <code>"careers@"</code>, <code>"@outlook.com"</code>) again outperformed keyword phrasing. 41 addresses harvested, 6 dropped as job-seekers or no hiring signal, 5 dropped as noise, 30 sent. None had ever been contacted before (lifetime IMAP check on all 30 → 0 prior sends).</p>
+    <div class="cols">
+      <div>1. hr@noviqraai.com</div>
+      <div>2. hema@nascenttechnologiesinc.com</div>
+      <div>3. hr@techgrid.in</div>
+      <div>4. mubeenakamal.basha@htcinc.com</div>
+      <div>5. vishal.me@technologist365.se</div>
+      <div>6. growthconnecthr6@gmail.com</div>
+      <div>7. networkinfotech75@gmail.com</div>
+      <div>8. mehuldhimmar35@gmail.com</div>
+      <div>9. hrspecialistsadia@gmail.com</div>
+      <div>10. harshit.srivastava@appzime.com</div>
+      <div>11. fauzhan.a@avowstech.com</div>
+      <div>12. pahlawanto@priventry.ai</div>
+      <div>13. shehabbb18@gmail.com</div>
+      <div>14. hagarmagdy08@gmail.com</div>
+      <div>15. info@ec4you.in</div>
+      <div>16. mamidi.ravikumar998@gmail.com</div>
+      <div>17. adityanaik1120@gmail.com</div>
+      <div>18. neuralaman@gmail.com</div>
+      <div>19. careerbridgeprime@gmail.com</div>
+      <div>20. info@attahariom.com</div>
+      <div>21. pooja@mypcot.com</div>
+      <div>22. krupalisurunsg@outlook.com</div>
+      <div>23. purvi.92@outlook.com</div>
+      <div>24. hr.necojobs@gmail.com</div>
+      <div>25. manideep.g1399@gmail.com</div>
+      <div>26. numberaacharya11@gmail.com</div>
+      <div>27. abixmartsupport@gmail.com</div>
+      <div>28. sssvchaitanya@gmail.com</div>
+      <div>29. subodhramola150@gmail.com</div>
+      <div>30. hr@midriffinfosolution.org</div>
+    </div>
   </section>
 
   <section>
     <h2>Bounces &amp; dedupes</h2>
-    <ul>
-      <li>No bounces observed during the run — sent minutes before this report; the inbox is worth a second look later today.</li>
-      <li><span class="t">Deduped (6)</span> — lifetime IMAP <code>sent-to</code> &gt; 0, and notably all six were the strongest Egypt-domain targets of the day: <code>ahmed.salah@gosmart.eg</code>, <code>hr.careers@arcorp-eg.com</code>, <code>hr@totplatform.com</code>, <code>hiring@objects.ws</code>, <code>hr@adwat.com</code>, <code>carine@contractsigned.net</code>.</li>
-      <li><span class="t">Dropped as job seekers, not hiring (11):</span> vala.mitul701, rajabasu.2014, riteshsonawane0419, jameel.jalal8, singlanikhil1993, jaydeepbgadhavi, Gaikwadshubham.work, rajeshvrm21, dev.avinandan.2, vishnu.thanubuddi, vvakhil0710, plus two referral-on-behalf posts (pradeepzconnect, kamalverma91).</li>
-      <li><span class="t">Dropped as unreachable region:</span> <code>dibya.inrn@gmail.com</code> (Kathmandu on-site), <code>fabiya1024@gmail.com</code> (New York, OPT/STEM — US work auth), <code>careers@mediamantra.in</code> (Gurgaon on-site intern), <code>Shruti@mindpec.com</code> ("Local Malaysians Only"), <code>hellosmarthr@gmail.com</code> (Moldova-based), <code>amanindia848@gmail.com</code> (India only), <code>akram.khan@vaiticka.com</code> (USA C2C), <code>renuka.hr.rnl@gmail.com</code> (Pune, unpaid intern).</li>
-      <li><span class="t">Dropped as off-stack:</span> <code>dzaki@brightaira.com</code> (.NET Core), <code>hr@wmgobusiness.com</code> (.NET full stack), <code>career@elma.ae</code> and <code>Cv3@altayar.com.eg</code> (electromechanical / oil &amp; gas).</li>
-      <li><span class="t">Name safety:</span> role addresses (<code>hr@</code>, <code>hiring@</code>, <code>recruiter@</code>) with no matching poster name fall back to "Hi there" rather than guess.</li>
+    <ul class="d">
+      <li><span class="tag g">0</span>SMTP send failures — all 30 accepted by Gmail at send time.</li>
+      <li><span class="tag g">0</span>Lifetime dedupes — no address on today's list had been mailed before.</li>
+      <li><span class="tag a">6</span>Dropped as job-seekers / no hiring signal: afgsuliman50, sumanshee39190, priyanka.up090, devendrapatil9552, subhavvakhariya1702, ersunnyrastogi22 (all @gmail.com).</li>
+      <li><span class="tag a">5</span>Dropped as noise or non-dev context: dudhwalajeelan480, mrugajanettech, vasoyaharsh123, arnavagarwalrecruitment, slidlylogistics.</li>
+      <li class="t">Delivery bounces are not visible yet — they land in the inbox over the next few hours and get picked up by the mailbox-check routine.</li>
     </ul>
   </section>
 
   <section>
     <h2>Blockers</h2>
-    <ul>
-      <li><span class="tag r">Modal scroll position hides required fields</span> Fekra's page 3 opened already scrolled past its first four questions. Filling only what was on screen left four <em>Invalid input</em> errors above the fold and <em>Review</em> silently did nothing — no error, no movement. Always scroll the modal to the top before filling and to the bottom before concluding a page is done.</li>
-      <li><span class="tag r">Tab group died mid-submit</span> The MCP tab group vanished between clicking <em>Submit application</em> and the confirmation on the first job. Recreating it and re-checking the job page showed the application had <em>not</em> gone through, and every field had to be re-entered — LinkedIn had not cached the answers. Verify state after any group death; never assume the last action landed.</li>
-      <li><span class="tag a">Outreach volume</span> 12/40. Five content-search permutations yielded 50 raw addresses; 11 were job seekers, 8 unreachable regions, 4 off-stack, 6 prior contacts. The Egypt-specific query was by far the best signal (9 hits, 6 corporate <code>.eg</code> domains) but every one of those was already contacted.</li>
-      <li><span class="tag a">Jobs search still paginates at 7</span> Confirmed again — <code>&amp;start=N</code> in steps of 7. Scrolling the list container hydrates nothing beyond the 7 rendered cards.</li>
-      <li><span class="tag a">Browser stability</span> One <code>browser_batch</code> timed out during multi-page job harvesting (navigation completed anyway), and one <code>javascript_tool</code> call hit the 45s CDP ceiling running an async scroll-and-collect loop. Native <code>computer</code> scroll actions in separate calls are more reliable than a JS scroll loop.</li>
+    <ul class="d">
+      <li><strong>LinkedIn job-detail hydration stalls.</strong> After roughly 12 <code>/jobs/view/&lt;id&gt;/</code> loads, pages served the header but never rendered the body or opened the Easy Apply modal — 4 clicks over ~40 s each on two consecutive jobs. No captcha, no security check, no bounce to <code>/login/</code>, so the safety breaker was <em>not</em> tripped; Phase 1 was stopped at 5 instead of hammering the endpoint.</li>
+      <li><strong>Content-search result cap.</strong> Each query returns only ~3–6 posts before "Are these results helpful?" — scrolling adds nothing. Reaching 40 addresses needs ~15 distinct queries, and the last 4 queries yielded only 2 usable addresses each. This is the ceiling on Phase 2 volume, not a bug.</li>
+      <li><strong>Board resume upload still dead.</strong> The Chrome extension stalls page-origin file requests, so Workable/Greenhouse/Lever/Ashby resume steps cannot complete. Unchanged since 2026-07-20.</li>
+      <li><strong>View budget.</strong> 28 of 31 LinkedIn page views spent (13 Phase 1 + 15 Phase 2); 3 left for today under the post-flag ramp.</li>
     </ul>
   </section>
 
   <section>
     <h2>Routine changes today</h2>
-    <ul>
-      <li><span class="t">Scroll the modal top-to-bottom before every page verdict.</span> A <em>Review</em> / <em>Next</em> click that produces no visible change almost always means an unfilled required field is off-screen, not a broken selector. Scroll up first, then down.</li>
-      <li><span class="t">JS-click for buttons, coordinate-click for the final submit.</span> <code>Next</code> and <code>Review</code> respond reliably to <code>.click()</code>; on this run the coordinate click on <em>Review</em> failed twice where the JS click worked. <em>Submit application</em> is the reverse — the coordinate click is what landed each time.</li>
-      <li><span class="t">Confirm submits by page text, not by screenshot.</span> <code>/Application submitted/</code> in <code>document.body.innerText</code> is a cheaper and more reliable success check than the "your application was sent" modal, which sometimes never renders.</li>
-      <li><span class="t">Native <code>&lt;select&gt;</code> works with the prototype value setter.</span> <code>Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set</code> + <code>change</code> + <code>input</code> events set English-proficiency dropdowns cleanly on both LinkedIn-native and Workable-mapped modals.</li>
-      <li><span class="t">Per-recipient role line in Phase 2.</span> The recipients JSON now carries a <code>role</code> field harvested from the post, and the body opens with "Re your post about the &lt;role&gt; opening". Costs nothing at harvest time and reads as a real reply instead of a blast.</li>
-      <li><span class="t">Skip rule held for six postings.</span> React Native years, an Alexandria commute, a Melbourne night shift, .NET/Angular/K8s, Java/Hibernate, and Python/Django were all declined rather than answered generously. Five honest applications beat ten padded ones.</li>
+    <ul class="d">
+      <li><strong>Easy Apply is no longer a <code>&lt;button&gt;</code>.</strong> It is now <code>a[aria-label="Easy Apply to this job"]</code>. The documented selector (<code>button</code> with <code>aria-label</code> starting "Easy Apply to") matches nothing.</li>
+      <li><strong>The apply modal lives in a shadow root</strong> on a plain <code>&lt;div&gt;</code> host — <code>div[role="dialog"]</code> and <code>document.querySelectorAll('select')</code> both miss it. Walk open shadow roots to reach the form.</li>
+      <li><strong>JS <code>.click()</code> silently no-ops</strong> on the Easy Apply anchor. Real coordinate clicks are required, and the first click after hydration often pops a "Save this application?" overlay that must be dismissed (X at 843,216) before the form is usable.</li>
+      <li><strong>Screenshot ↔ CSS pixel scale is 0.8056</strong> (1450 px screenshot / 1800 px viewport). Button rects read out of the shadow root must be multiplied by that factor before clicking, otherwise Submit lands off-screen.</li>
+      <li><strong>Some short-answer fields reject long text</strong> with "Please enter a valid answer" — Mondia's Vue/Node question accepted 53 chars after rejecting 172. Keep screening answers terse.</li>
+      <li><strong>Selects inside the modal are real <code>&lt;select&gt;</code> elements</strong> and respond to the native value setter plus <code>input</code>/<code>change</code> events with <code>composed:true</code>.</li>
     </ul>
   </section>
 
-  <footer>Generated 2026-08-12 · linkedin-applications daily routine</footer>
+  <footer>Generated 2026-08-31 · linkedin-applications · daily-apply</footer>
 </div>
 </body>
 </html>
